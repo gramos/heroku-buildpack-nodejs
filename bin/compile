@@ -202,9 +202,11 @@ export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
 
 # install dependencies with npm
-echo "-----> Installing dependencies with npm"
-run_npm "install --production"
-run_npm "rebuild"
+echo "-----> Installing bower"
+run_npm "install bower"
+
+echo "-----> Installing dependencies with bower"
+bower install
 echo "Dependencies installed" | indent
 
 echo "-----> Building runtime environment"
