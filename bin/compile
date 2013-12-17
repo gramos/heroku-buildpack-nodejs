@@ -206,7 +206,8 @@ echo "-----> Installing bower"
 run_npm "install bower"
 
 echo "-----> Installing dependencies with bower"
-bower install
+which bower
+env bower install
 echo "Dependencies installed" | indent
 
 echo "-----> Building runtime environment"
